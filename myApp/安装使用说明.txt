@@ -1,0 +1,22 @@
+项目安装：
+
+此项目需要install两个目录
+第一个目录myApp下,此目录是node依赖项安装
+npm install
+npm install webpack -g
+npm install webpack-dev-server -g
+第二个目录myApp/myVue，此目录是项目依赖性安装
+npm install
+
+启动项目：
+
+需要在myApp目录下启动
+npm run dev   //开发模式运行
+npm start     //如果不需要打包，则直接运行此命令
+地址：localhost:3000
+
+配置路由及参数：
+myApp/routes/configAPI.js配置接口映射
+myApp/routes/index.js配置接口请求
+myApp/myVue/src/router.js配置前端路由和参数，以/:id方式传参，组件中以this.$route.params.id方式接收参数
+

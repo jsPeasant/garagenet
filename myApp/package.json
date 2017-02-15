@@ -1,0 +1,34 @@
+{
+  "name": "myApp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "set DEBUG=myapp:* & node ./bin/www",
+    "SPROD" : "SET NODE_ENV=PROD&&npm start",
+    "SDEV" : "SET NODE_ENV=DEV&&npm start",
+    "dev": "cd myVue && webpack --progress && cd .. &&SET NODE_ENV=DEV&&npm start",
+    "release" : "cd myVue && webpack --progress && cd .. &&SET NODE_ENV=RELEASE&&npm start",
+    "build": "cd myVue && npm run build && cd .. &&SET NODE_ENV=PROD&&npm start"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "child_process": "^1.0.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "~2.3.3",
+    "express": "~4.13.1",
+    "morgan": "~1.6.1",
+    "os": "^0.1.1",
+    "serve-favicon": "~2.3.0",
+    "vue": "^1.0.0",
+    "consolidate": "^0.14.0"
+  },
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "npm-install-webpack-plugin": "^2.0.2",
+    "reload": "^0.7.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.12.2"
+  }
+}
